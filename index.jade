@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= "Wendigo Tattoo | Make your dreams become ink"
+    link(rel="stylesheet" type="text/css" href="assets/css/styles.css")
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Amatic+SC' rel='stylesheet' type='text/css')
+      
+  body
+    //- HEADER
+    header
+      .wrapper
+        h1.no-margin-padding Wendigo
+          span Tattoo
+        h4.no-margin-padding Make your dreams become ink
+        a(href="#") Contact
+    
+    //- MAIN
+    main.wrapper
+      //- ORIGINAL
+      section#original  
+        h2 Original designs
+        .img-container
+          .highlight
+            img(src="assets/img/original/satyr.jpg", alt="satyr")
+          .divided
+            img(src="assets/img/original/icecream-skulls.jpg", alt="icecream skulls")
+            img(src="assets/img/original/natives.jpg", alt="natives")        
+            img(src="assets/img/original/joker.jpg", alt="joker")
+            img(src="assets/img/original/deer-demon.jpg", alt="deer demon")
+        
+      //- OPINIONS
+      //- section#opinions
+      //-   .media-object
+      //-     img(src="", alt="")
+      //-     .description
+      //-       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      //-   #dots
+      //-     ul
+      //-       li
+      //-       li.active
+      //-       li
+      
+      //- WORK
+      section#work  
+        h2 Previous work
+        .img-container
+          .divided
+            img(src="assets/img/work/mirror.jpg", alt="mirror")
+            img(src="assets/img/work/clock-eye.jpg", alt="clock eye")
+            img(src="assets/img/work/dream-catcher.jpg", alt="dream catcher")        
+            img(src="assets/img/work/skull-demon.jpg", alt="skull demon")
+              
+          .highlight
+            img(src="assets/img/work/flower.jpg", alt="flower")
+      //- OPINIONS
+      //- section#about-me
+      //-   .media-object
+      //-     img(src="", alt="")
+      //-     .description
+      //-       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      
+      //- CONTACT
+    section#contact  
+      .wrapper
+        h2 Contact me
+        form
+          .name-email
+            input(type="text", placeholder="Name").name
+            input(type="email", placeholder="Email").email
+          textarea(name="reason", placeholder="Reason").reason
+        a(href="#") Send
+          
+          
+    footer
+      p Copyright &copy 2016 Wendigo Tattoo
+      p All Rights Reserved
+      
