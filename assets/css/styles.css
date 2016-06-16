@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans Condensed', sans-serif;
-  background: #EFFFE9;
+  background: #FFF;
   color: #011627;
 }
 
@@ -90,13 +90,23 @@ header .wrapper {
 
 header .wrapper h1 {
   color: #EFFFE9;
-  font-size: 4rem;
-  letter-spacing: -3px;
   margin-bottom: 2rem;
+  font-size: 4rem;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 header .wrapper h1 span {
-  font-weight: 300;
+  font-weight: lighter;
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: -3px;
+  font-size: .6em;
+  display: inline-block;
+  -webkit-transform: translate(0, -0.45em);
+      -ms-transform: translate(0, -0.45em);
+          transform: translate(0, -0.45em);
+  color: #ec4b5f;
 }
 
 header .wrapper h4 {
@@ -129,6 +139,7 @@ header .wrapper a:active {
 main h2 {
   font-weight: lighter;
   font-size: 1.5rem;
+  margin-top: 3rem;
 }
 
 main .img-container {
@@ -168,8 +179,43 @@ main .img-container .divided img {
   height: 50%;
 }
 
+main hr {
+  clear: both;
+  border-top: 2px solid #E71D36;
+  width: 100px;
+  margin: 3rem auto 0;
+}
+
+#about-me .media-object, #opinions .media-object {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#about-me .media-object .media, #opinions .media-object .media {
+  margin-right: 20px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+#about-me .avatar, #opinions .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#about-me p, #opinions p {
+  margin: 0;
+}
+
+#about-me p.muted, #opinions p.muted {
+  font-size: .8em;
+  color: rgba(1, 22, 39, 0.75);
+}
+
 #contact {
-  margin: 2rem 0;
+  margin: 6rem 0 0;
   background: #E71D36;
   color: #EFFFE9;
   padding: 3rem 0;
@@ -190,6 +236,10 @@ main .img-container .divided img {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#contact form .name-email input {
+  width: 49%;
 }
 
 #contact form input, #contact form textarea {

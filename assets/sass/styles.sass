@@ -13,7 +13,7 @@ html, body
   margin: 0
   padding: 0
   font-family: 'Open Sans Condensed', sans-serif
-  background: $bright
+  background: $white
   color: $dark
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary
@@ -76,12 +76,26 @@ header
     padding: 6rem 0
     h1
       color: $bright
-      font-size: 4rem
-      letter-spacing: -3px
+      // letter-spacing: -3px
       margin-bottom: 2rem
+      // font-family: 'Amatic SC', cursive
+      font-size: 4rem
+      font-family: 'Fredericka the Great', cursive
+      // font-family: 'Caesar Dressing', cursive
+      // font-family: 'Loved by the King', cursive
+      // font-family: 'Jim Nightshade', cursive
+      font-weight: lighter
+      text-transform: uppercase
+
       // text-transform: uppercase
       span
-        font-weight: 300
+        font-weight: lighter
+        font-family: 'Open Sans Condensed', sans-serif
+        letter-spacing: -3px
+        font-size: .6em
+        display: inline-block
+        transform: translate(0, -.45em)
+        color: lighten($main, 10%)
     h4
       color: $bright
       font-size: 2rem
@@ -107,13 +121,12 @@ main
   h2
     font-weight: lighter
     font-size: 1.5rem
+    margin-top: 3rem
 
   .img-container
     display: flex
     flex-direction: column
     flex-wrap: nowrap
-    // box-align: center
-    // align-items: center
     .highlight
       line-height: 0
       img
@@ -126,10 +139,36 @@ main
       img
         width: 50%
         height: 50%
+  hr
+    clear: both
+    border-top: 2px solid $main
+    width: 100px
+    margin: 3rem auto 0
+
+// - - - - - - ABOUT ME & OPINIONS - - - - - - //
+#about-me, #opinions
+  .media-object
+    // margin-top: 3rem
+    display: flex
+
+    .media
+      margin-right: 20px
+      flex-shrink: 0
+
+  .avatar
+    width: 50px
+    height: 50px
+    border-radius: 50%
+
+  p
+    margin: 0
+    &.muted
+      font-size: .8em
+      color: transparentize($dark, 0.25)
 
 // - - - - - - CONTACT - - - - - - //
 #contact
-  margin: 2rem 0
+  margin: 6rem 0 0
   background: $main
   color: $bright
   padding: 3rem 0
@@ -142,6 +181,8 @@ main
       flex-direction: row
       flex-wrap: nowrap
       justify-content: space-between
+      input
+        width: 49%
     input, textarea
       background: lighten($main, 10%)
       outline: none
