@@ -59,7 +59,7 @@ header::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/deers.jpg");
+  background-image: url("../img/forest2.jpg");
   background-size: cover;
   background-position: center;
   -webkit-filter: grayscale(1);
