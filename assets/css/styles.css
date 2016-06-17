@@ -6,6 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #FFF;
   color: #011627;
 }
@@ -128,7 +129,7 @@ header .wrapper a:hover {
 
 main h2 {
   font-weight: lighter;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 3rem;
 }
 
@@ -202,6 +203,7 @@ main hr {
 
 #about-me p, #opinions p {
   margin: 0;
+  font-size: .8rem;
 }
 
 #about-me p.muted, #opinions p.muted {
@@ -211,7 +213,7 @@ main hr {
 
 #contact {
   margin: 6rem 0 0;
-  background: #ec4b5f;
+  background: #011627;
   color: #EFFFE9;
   padding: 3rem 0;
 }
@@ -238,7 +240,7 @@ main hr {
 }
 
 #contact form input, #contact form textarea {
-  background: #f17988;
+  background: rgba(255, 255, 255, 0.1);
   outline: none;
   border: 0;
   color: #FFF;
@@ -247,19 +249,19 @@ main hr {
 }
 
 #contact form input::-webkit-input-placeholder, #contact form textarea::-webkit-input-placeholder {
-  color: #fbd5da;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 #contact form input::-moz-placeholder, #contact form textarea::-moz-placeholder {
-  color: #fbd5da;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 #contact form input:-ms-input-placeholder, #contact form textarea:-ms-input-placeholder {
-  color: #fbd5da;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 #contact form input::placeholder, #contact form textarea::placeholder {
-  color: #fbd5da;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 #contact form input:focus, #contact form textarea:focus {
@@ -275,9 +277,9 @@ main hr {
   padding: 10px 50px;
   text-decoration: none;
   font-weight: bold;
-  background-color: #EFFFE9;
-  color: #011627;
-  box-shadow: 0 4px 0 0 #011627;
+  background-color: #ec4b5f;
+  color: #EFFFE9;
+  box-shadow: 0 4px 0 0 #EFFFE9;
   transition: all ease-in-out 100ms;
 }
 
@@ -285,11 +287,11 @@ main hr {
   -webkit-transform: translate(0, 4px);
       -ms-transform: translate(0, 4px);
           transform: translate(0, 4px);
-  box-shadow: 0px 0px 0px 0px #011627;
+  box-shadow: 0px 0px 0px 0px #EFFFE9;
 }
 
 footer {
   margin-top: 2rem;
   text-align: center;
-  font-size: .8rem;
+  font-size: .7rem;
 }
