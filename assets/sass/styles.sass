@@ -38,13 +38,12 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
     content: ''
     display: table
     clear: both
+
 // - - - - - - HEADER - - - - - - //
 header
   position: relative
   z-index: 1
   text-align: center
-  height: 570px
-  min-height: 470px
   &::before
     content: ''
     position: absolute
@@ -69,52 +68,53 @@ header
     opacity: .6
 
   .wrapper
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
     padding: 6rem 0
+    max-width: 80%
     h1
       color: $bright
       // letter-spacing: -3px
       margin-bottom: 2rem
       // font-family: 'Amatic SC', cursive
-      font-size: 4rem
+      font-size: 3.5rem
       font-family: 'Fredericka the Great', cursive
       // font-family: 'Caesar Dressing', cursive
       // font-family: 'Loved by the King', cursive
       // font-family: 'Jim Nightshade', cursive
+      // font-family: 'Cabin Sketch', cursive
+      // font-family: 'Love Ya Like A Sister', cursive
+      font-size: 3rem
+      // font-family: 'Ewert', cursive
       font-weight: lighter
       text-transform: uppercase
-
-      // text-transform: uppercase
       span
         font-weight: lighter
         font-family: 'Open Sans Condensed', sans-serif
+        // font-family: 'Caveat', cursive
+        // font-family: 'Amatic SC', cursive
         letter-spacing: -3px
         font-size: .6em
         display: inline-block
-        transform: translate(0, -.45em)
+        transform: translate(0, -.5em)
         color: lighten($main, 10%)
     h4
-      color: $bright
+      color: transparentize($bright, 0.25)
       font-size: 2rem
       font-family: 'Amatic SC', cursive
+      font-size: 1.5rem
+      // font-family: 'Caveat', cursive
+      // text-transform: uppercase
       font-weight: lighter
       opacity: .8
-      margin-bottom: 6rem
+      margin-bottom: 3rem
     a
       display: inline-block
-      padding: 10px 50px
+      font-size: 1.5rem
+      padding: 0 30px
       text-decoration: none
-      font-weight: bold
-      background-color: $main
       color: $bright
-      box-shadow: 0 4px 0 0 $bright
-      transition: all ease-in-out 100ms
-      &:active
-        transform: translate(0, 4px)
-        box-shadow: 0px 0px 0px 0px $bright
+      color: transparentize($bright, 0.4)
+      &:hover
+        color: $main
 
 // - - - - - - MAIN - - - - - - //
 main
@@ -127,6 +127,10 @@ main
     display: flex
     flex-direction: column
     flex-wrap: nowrap
+    div
+      img
+        padding: .35rem
+        border-radius: 12px
     .highlight
       line-height: 0
       img
