@@ -174,11 +174,28 @@ main .img-container .divided img {
   height: 50%;
 }
 
+@media screen and (min-width: 720px) {
+  main .img-container {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .img-container .highlight {
+    min-width: 50%;
+  }
+}
+
 main hr {
   clear: both;
   border-top: 2px solid #ec4b5f;
   width: 100px;
   margin: 3rem auto 0;
+}
+
+@media screen and (min-width: 720px) {
+  #about-me .wrapper, #opinions .wrapper {
+    max-width: 500px;
+  }
 }
 
 #about-me .media-object, #opinions .media-object {

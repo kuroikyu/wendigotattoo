@@ -129,8 +129,7 @@ main
     flex-direction: column
     flex-wrap: nowrap
 
-    // @media screen and (min-width: 720px)
-      flex-direction: row
+
     div
       img
         padding: .35rem
@@ -147,6 +146,11 @@ main
       img
         width: 50%
         height: 50%
+
+    @media screen and (min-width: 720px)
+      flex-direction: row
+      .highlight
+        min-width: 50%
   hr
     clear: both
     border-top: 2px solid $main
@@ -155,10 +159,13 @@ main
 
 // - - - - - - ABOUT ME & OPINIONS - - - - - - //
 #about-me, #opinions
+  .wrapper
+    @media screen and (min-width: 720px)
+      max-width: 500px
+
   .media-object
     // margin-top: 3rem
     display: flex
-
     .media
       margin-right: 20px
       flex-shrink: 0
