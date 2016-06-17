@@ -1,5 +1,5 @@
 // - - - - - - VARIABLES - - - - - - //
-$main: #E71D36
+$main: lighten(#E71D36, 10%)
 $secondary: #2EC4B6
 $bright: #EFFFE9
 $dark: #011627
@@ -95,7 +95,7 @@ header
         font-size: .6em
         display: inline-block
         transform: translate(0, -.5em)
-        color: lighten($main, 10%)
+        color: $main
     h4
       color: transparentize($bright, 0.25)
       font-size: 2rem
@@ -127,6 +127,8 @@ main
     display: flex
     flex-direction: column
     flex-wrap: nowrap
+
+
     div
       img
         padding: .35rem
@@ -195,7 +197,7 @@ main
       padding: .5rem
       transition: all ease-in-out 300ms
       &::placeholder
-        color: lighten($main, 25%)
+        color: lighten($main, 30%)
       &:focus
         box-shadow: inset 0 -2px 0 0px $bright
 

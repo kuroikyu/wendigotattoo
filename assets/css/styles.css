@@ -123,7 +123,7 @@ header .wrapper a {
 }
 
 header .wrapper a:hover {
-  color: #E71D36;
+  color: #ec4b5f;
 }
 
 main h2 {
@@ -176,7 +176,7 @@ main .img-container .divided img {
 
 main hr {
   clear: both;
-  border-top: 2px solid #E71D36;
+  border-top: 2px solid #ec4b5f;
   width: 100px;
   margin: 3rem auto 0;
 }
@@ -211,7 +211,7 @@ main hr {
 
 #contact {
   margin: 6rem 0 0;
-  background: #E71D36;
+  background: #ec4b5f;
   color: #EFFFE9;
   padding: 3rem 0;
 }
@@ -238,7 +238,7 @@ main hr {
 }
 
 #contact form input, #contact form textarea {
-  background: #ec4b5f;
+  background: #f17988;
   outline: none;
   border: 0;
   color: #FFF;
@@ -247,19 +247,19 @@ main hr {
 }
 
 #contact form input::-webkit-input-placeholder, #contact form textarea::-webkit-input-placeholder {
-  color: #f3909d;
+  color: #fbd5da;
 }
 
 #contact form input::-moz-placeholder, #contact form textarea::-moz-placeholder {
-  color: #f3909d;
+  color: #fbd5da;
 }
 
 #contact form input:-ms-input-placeholder, #contact form textarea:-ms-input-placeholder {
-  color: #f3909d;
+  color: #fbd5da;
 }
 
 #contact form input::placeholder, #contact form textarea::placeholder {
-  color: #f3909d;
+  color: #fbd5da;
 }
 
 #contact form input:focus, #contact form textarea:focus {
