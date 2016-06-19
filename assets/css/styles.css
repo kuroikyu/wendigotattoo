@@ -133,6 +133,7 @@ main h2 {
   margin-bottom: 2.5rem;
   position: relative;
   z-index: 1;
+  color: #FFF;
   text-align: center;
 }
 
@@ -143,7 +144,7 @@ main h2:after {
   z-index: -1;
   width: 200px;
   height: 25px;
-  background: rgba(1, 22, 39, 0.2);
+  background: rgba(1, 22, 39, 0.7);
   top: 0px;
   left: calc(50%);
   -webkit-transform: rotate(-2deg) skewX(10deg) translate(-50%, 0);
