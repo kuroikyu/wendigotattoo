@@ -129,7 +129,26 @@ header .wrapper a:hover {
 main h2 {
   font-weight: lighter;
   font-size: 1.2rem;
-  margin-top: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+main h2:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 25px;
+  background: rgba(1, 22, 39, 0.2);
+  top: 0px;
+  left: calc(50%);
+  -webkit-transform: rotate(-2deg) skewX(10deg) translate(-50%, 0);
+      -ms-transform: rotate(-2deg) skewX(10deg) translate(-50%, 0);
+          transform: rotate(-2deg) skewX(10deg) translate(-50%, 0);
 }
 
 main .img-container {
@@ -225,6 +244,35 @@ main hr {
 #about-me p.muted, #opinions p.muted {
   font-size: .8em;
   color: rgba(1, 22, 39, 0.75);
+}
+
+#about-me .carousel-nav, #opinions .carousel-nav {
+  margin-top: -20px;
+  text-align: right;
+}
+
+#about-me .carousel-nav svg, #opinions .carousel-nav svg {
+  cursor: pointer;
+}
+
+#about-me .carousel-wrap, #opinions .carousel-wrap {
+  position: relative;
+}
+
+#about-me .carousel-wrap .media-object, #opinions .carousel-wrap .media-object {
+  position: absolute;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  -webkit-transform: translate(0px, 40px);
+      -ms-transform: translate(0px, 40px);
+          transform: translate(0px, 40px);
+}
+
+#about-me .carousel-wrap .media-object.is-current, #opinions .carousel-wrap .media-object.is-current {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #contact {

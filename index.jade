@@ -64,12 +64,35 @@ html(lang="en")
       section#opinions
         h2 Opinions
         .wrapper
-          .media-object
-            .media
-              img.avatar(src="assets/img/maria.jpg")
-            .content
-              p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
-              p.muted Maria 2016
+          .carousel-nav
+            svg(xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000")
+              path(d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z")
+              path(d="M0-.5h24v24H0z" fill="none")
+            svg(xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000")
+              path(d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z")
+              path(d="M0-.25h24v24H0z" fill="none")
+
+          .carousel-wrap
+            .media-object.carousel-unit
+              .media
+                img.avatar(src="assets/img/maria.jpg")
+              .content
+                p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
+                p.muted — Maria
+                
+            .media-object.carousel-unit
+              .media
+                img.avatar(src="assets/img/roc.jpg")
+              .content
+                p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
+                p.muted — Maria
+                
+            .media-object.carousel-unit
+              .media
+                img.avatar(src="assets/img/profile.jpg")
+              .content
+                p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
+                p.muted — Maria
       
       //- CONTACT
     section#contact  
@@ -85,3 +108,6 @@ html(lang="en")
           
     footer
       p Kuroi Kyu &copy 2016       
+
+    script(type="application/javascript", src="assets/js/jquery-3.0.0.min.js")
+    script(type="application/javascript", src="assets/js/functions.js")
