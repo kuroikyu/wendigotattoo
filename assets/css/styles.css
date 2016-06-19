@@ -60,7 +60,7 @@ header::before {
   height: 100%;
   background-image: url("../img/header.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 50% 75%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
