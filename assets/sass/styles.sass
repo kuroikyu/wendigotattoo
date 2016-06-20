@@ -4,15 +4,22 @@ $secondary: #2EC4B6
 $bright: #EFFFE9
 $dark: #011627
 $white: #FFF
+$titleFont: 'Fredericka the Great', cursive
+$subtitleFont: 'Amatic SC', cursive
+$accentFont: 'Open Sans Condensed', sans-serif
+$mainFont: 'Roboto', sans-serif
 
 // - - - - - - GENERAL STYLES - - - - - - //
 *
   box-sizing: border-box
+  &::selection
+    background: $main
+    color: $bright
 
 html, body
   margin: 0
   padding: 0
-  font-family: 'Roboto', sans-serif
+  font-family: $mainFont
   background: $white
   color: $dark
 
@@ -77,7 +84,8 @@ header
       margin-bottom: 2rem
       // font-family: 'Amatic SC', cursive
       font-size: 3.5rem
-      font-family: 'Fredericka the Great', cursive
+      font-family: $titleFont
+      // font-family: 'Fredericka the Great', cursive
       // font-family: 'Caesar Dressing', cursive
       // font-family: 'Loved by the King', cursive
       // font-family: 'Jim Nightshade', cursive
@@ -89,7 +97,8 @@ header
       text-transform: uppercase
       span
         font-weight: lighter
-        font-family: 'Open Sans Condensed', sans-serif
+        font-family: $accentFont
+        // font-family: 'Open Sans Condensed', sans-serif
         // font-family: 'Caveat', cursive
         // font-family: 'Amatic SC', cursive
         // letter-spacing: -3px
@@ -100,7 +109,8 @@ header
     h4
       color: transparentize($bright, 0.25)
       font-size: 2rem
-      font-family: 'Amatic SC', cursive
+      font-family: $subtitleFont
+      // font-family: 'Amatic SC', cursive
       font-size: 1.5rem
       // font-family: 'Caveat', cursive
       // text-transform: uppercase
@@ -120,29 +130,33 @@ header
 
 // - - - - - - MAIN - - - - - - //
 // TODO: Add links to "view more" on facebook and instagram
+h2
+  font-weight: lighter
+  font-size: 1.2rem
+  margin-top: 5rem
+  margin-bottom: 2.5rem
+  position: relative
+  z-index: 1
+  color: $white
+  text-align: center
+
+  font-family: $subtitleFont
+  text-transform: uppercase
+  font-size: 2rem
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    z-index: -1
+    width: 200px
+    height: 30px
+    background: transparentize($dark, 0.3)
+    top: 0px
+    left: calc(50%)
+    transform: rotate(-3deg) skewX(10deg) translate(-50%, 0)
+
+
 main
-  h2
-    font-weight: lighter
-    font-size: 1.2rem
-    margin-top: 5rem
-    margin-bottom: 2.5rem
-    position: relative
-    z-index: 1
-    color: $white
-    text-align: center
-    &:after
-      content: ''
-      display: block
-      position: absolute
-      z-index: -1
-      width: 200px
-      height: 25px
-      background: transparentize($dark, 0.3)
-      top: 0px
-      left: calc(50%)
-      transform: rotate(-2deg) skewX(10deg) translate(-50%, 0)
-
-
   .img-container
     display: flex
     flex-direction: column
@@ -227,6 +241,14 @@ main
   background: $dark
   color: $bright
   padding: 3rem 0
+  text-align: center
+
+  h2
+    color: $dark
+    margin-top: 1.5rem
+    font-weight: bold
+    &::after
+      background-color: $bright
 
   form
     .name-email
@@ -237,22 +259,29 @@ main
       flex-wrap: nowrap
       justify-content: space-between
       input
-        width: 49%
+        width: 100%
+        &.name
+          margin-right: .25rem
+        &.email
+          margin-left: .25rem
     input, textarea
-      background: transparentize($white, 0.9)
+      background: transparentize($bright, 0.9)
       outline: none
       border: 0
-      color: $white
-      padding: .5rem
+      color: $bright
+      font-size: 0.9rem
+      padding: 1rem
+      // margin: 0 10px
       transition: all ease-in-out 300ms
       &::placeholder
-        color: transparentize($white, 0.6)
+        color: transparentize($bright, 0.6)
       &:focus
         box-shadow: inset 0 -2px 0 0px $bright
 
     textarea
       width: 100%
       margin-bottom: .25rem
+      font-family: $mainFont
   a
     margin-top: 0.83em
     display: inline-block
