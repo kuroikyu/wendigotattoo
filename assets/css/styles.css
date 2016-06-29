@@ -91,6 +91,13 @@ header .wrapper {
   max-width: 80%;
 }
 
+header .wrapper svg {
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  width: 300px;
+  fill: #011627;
+}
+
 header .wrapper h1 {
   color: #EFFFE9;
   margin-bottom: 2rem;
