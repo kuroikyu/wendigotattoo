@@ -172,6 +172,21 @@ h2:after {
           transform: rotate(-3deg) skewX(10deg) translate(-50%, 0);
 }
 
+.dimmer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(1, 22, 39, 0.95);
+}
+
+.dimmer.display {
+  display: inherit;
+}
+
 main .img-container {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,6 +202,19 @@ main .img-container {
 main .img-container div img {
   padding: .35rem;
   border-radius: 12px;
+}
+
+main .img-container div img.enlarge {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+  width: inherit !important;
+  max-width: 95%;
+  height: inherit;
 }
 
 main .img-container .highlight {

@@ -1,6 +1,6 @@
 $(function() {
     carousel();
-    console.log('hei');
+    imgZoom();
 });
 
 function carousel() {
@@ -55,4 +55,39 @@ function carousel() {
         }
     });
 
+}
+
+function imgZoom() {
+  var $imgContainer = $('.img-container');
+  var $images = $imgContainer.find('img');
+  var $dimmer = $('.dimmer');
+
+  $images.on('click', function() {
+    if ($(this).is('.enlarge')) {
+      $(this).removeClass('enlarge');
+      $dimmer.removeClass('display');
+
+    } else {
+      // Close image viewer
+      // Trigger is click on enlarged image
+      $(this).addClass('enlarge');
+      $dimmer.addClass('display');
+    }
+  });
+
+
+  // Close trigger is click on dimmer
+  $dimmer.on('click', function () {
+    $images.filter('.enlarge').removeClass('enlarge');
+    $(this).removeClass('display');
+  });
+
+
+  // Close trigger is on ESC keypress
+
+  // Close trigger is on X button click
+
+  // loop through images
+    // trigger is arrouw buttons
+    // trigger is Arrow Keys
 }
