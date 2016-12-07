@@ -1,6 +1,14 @@
 $(function() {
     carousel();
     imgZoom();
+    $(window).scroll(function () {
+     if ($(window).scrollTop() >= $(document).height() - $(window).height()-100) {
+        $('#contact-me').addClass('hover');
+     } else {
+       $('#contact-me').removeClass('hover');
+
+     }
+    });
 });
 
 function carousel() {
