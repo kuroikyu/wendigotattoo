@@ -8,61 +8,62 @@ html(lang="en")
     link(rel="stylesheet" type="text/css" href="assets/css/styles.css")
     link(href="https://fonts.googleapis.com/css?family=Roboto|Fredericka+the+Great|Open+Sans+Condensed:300,700|Amatic+SC" rel='stylesheet' type='text/css')
     link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
-      
+
   body
+    .dimmer
     //- HEADER
     header
       .wrapper
         include assets/logo.svg
-        //- img(src="assets/logo.svg", alt="") 
+        //- img(src="assets/logo.svg", alt="")
         h1.no-margin-padding Wendigo
           span Tattoo
         h4.no-margin-padding Make your dreams become ink
         //- a(href="#") Contact
-        a(href="https://www.facebook.com/WendigoTattoo/"): i.fa.fa-facebook-official
-        a(href="https://www.instagram.com/wendigotattoo/"): i.fa.fa-instagram
-    
+        a(href="https://www.facebook.com/WendigoTattoo/" target="_blank"): i.fa.fa-facebook-official
+        a(href="https://www.instagram.com/wendigotattoo/" target="_blank"): i.fa.fa-instagram
+
     //- MAIN
     main.wrapper
       //- ORIGINAL
-      section#original  
+      section#original
         h2 Original designs
         .img-container
           .highlight
             img(src="assets/img/original/pirate-skull.jpg", alt="satyr")
           .divided
             img(src="assets/img/original/icecream-skulls.jpg", alt="icecream skulls")
-            img(src="assets/img/original/natives.jpg", alt="natives")        
+            img(src="assets/img/original/natives.jpg", alt="natives")
             img(src="assets/img/original/joker.jpg", alt="joker")
             img(src="assets/img/original/deer-demon.jpg", alt="deer demon")
-        
+
       //- ABOUT ME
       section#about-me
         h2 About me
-        .wrapper  
+        .wrapper
           .media-object
             .media
               img.avatar(src="assets/img/roc.jpg")
             .content
               p Soy Roc y esto es jackass. Lo peto haciendo lo que sea y lo sabes. Aqui pondriamos una descripcion asi todo molona. Rafa huele a culo. Lorem ipsum de la muerte.
-        
+
       hr
-        
+
       //- WORK
-      section#work  
-        h2 Previous work
+      section#work
+        h2 Inked designs
         .img-container
           .divided
             img(src="assets/img/work/mirror.jpg", alt="mirror")
             img(src="assets/img/work/clock-eye.jpg", alt="clock eye")
-            img(src="assets/img/work/dream-catcher.jpg", alt="dream catcher")        
+            img(src="assets/img/work/dream-catcher.jpg", alt="dream catcher")
             img(src="assets/img/work/skull-demon.jpg", alt="skull demon")
-              
+
           .highlight
             img(src="assets/img/work/flower.jpg", alt="flower")
-              
-              
-      //- OPINIONS
+
+
+      //- OPINIONS test
       section#opinions
         h2 Opinions
         .wrapper
@@ -81,35 +82,30 @@ html(lang="en")
               .content
                 p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
                 p.muted — Maria
-                
+
             .media-object.carousel-unit
               .media
                 img.avatar(src="assets/img/roc.jpg")
               .content
                 p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
                 p.muted — Maria
-                
+
             .media-object.carousel-unit
               .media
                 img.avatar(src="assets/img/profile.jpg")
               .content
                 p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
                 p.muted — Maria
-      
+
       //- CONTACT
-    section#contact  
+    section#contact
       .wrapper
         h2 Contact me
-        form
-          .name-email
-            input(type="text", placeholder="Name").name
-            input(type="email", placeholder="Email").email
-          textarea(name="reason", placeholder="Reason").reason
-        a(href="#") Send
-          
-          
+        a#contact-me(href="http://m.me/WendigoTattoo", target="_blank"): span on #[i.fa.fa-commenting] facebook messenger
+
+
     footer
-      p Kuroi Kyu &copy 2016       
+      p Kuroi Kyu &copy; 2016
 
     script(type="application/javascript", src="assets/js/jquery-3.0.0.min.js")
     script(type="application/javascript", src="assets/js/functions.js")

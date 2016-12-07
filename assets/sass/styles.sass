@@ -9,6 +9,96 @@ $subtitleFont: 'Amatic SC', cursive
 $accentFont: 'Open Sans Condensed', sans-serif
 $mainFont: 'Roboto', sans-serif
 
+
+// - - - - - - MIXINS - - - - - - - //
+@mixin btn-draw($color, $color-hov, $width: 1px, $padding: 0.5em, $time: 0.2s)
+  position: relative
+
+  display: inline-block
+
+  color: $color
+  border-bottom: $width solid $color
+  cursor: pointer
+  overflow: hidden
+  transition: color $time ease-in-out, background-color $time ease-in-out
+
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 0
+
+    height: 100%
+    width: $width
+
+    background: $color
+    transform: translateY(100%)
+    transition: transform $time ease-in-out
+    transition-delay: $time * 3
+
+
+  > span
+    position: relative
+
+    display: block
+    padding: $padding
+
+    color: inherit
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+
+      background: $color
+      transition: transform $time ease-in-out
+
+
+    &:before
+      height: $width
+      width: 100%
+
+      transform: translateX(100%)
+      transition-delay: $time * 2
+
+
+    &:after
+      height: 100%
+      width: $width
+
+      transform: translateY(-100%)
+      transition-delay: $time
+
+
+
+  &.hover:after,
+  &.hover > span:before,
+  &.hover > span:after
+    transform: translate(0, 0)
+
+
+  &.hover:after
+    transition-delay: 0s
+
+
+  &.hover > span:before
+    transition-delay: $time
+
+
+  &.hover > span:after
+    transition-delay: $time * 2
+
+
+  &.hover
+    color: $color-hov
+    background-color: $color
+    transition-delay: $time * 3
+
+
+
+
 // - - - - - - GENERAL STYLES - - - - - - //
 *
   box-sizing: border-box
@@ -163,6 +253,17 @@ h2
     left: calc(50%)
     transform: rotate(-3deg) skewX(10deg) translate(-50%, 0)
 
+.dimmer
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 99
+  background-color: transparentize($dark, .05)
+  &.display
+    display: inherit
 
 main
   .img-container
@@ -175,6 +276,19 @@ main
       img
         padding: .35rem
         border-radius: 12px
+        // transition: all 300ms ease-in-out
+        &.enlarge
+          position: fixed
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          z-index: 100
+
+          width: inherit !important
+          max-width: 95%
+          height: inherit
+
+
     .highlight
       line-height: 0
       img
@@ -249,6 +363,7 @@ main
   background: $dark
   color: $bright
   padding: 3rem 0
+  padding-bottom: 6rem
   text-align: center
 
   h2
@@ -258,51 +373,24 @@ main
     &::after
       background-color: $bright
 
-  form
-    .name-email
-      display: inline-block
-      margin-bottom: .5rem
-      display: flex
-      flex-direction: row
-      flex-wrap: nowrap
-      justify-content: space-between
-      input
-        width: 100%
-        &.name
-          margin-right: .25rem
-        &.email
-          margin-left: .25rem
-    input, textarea
-      background: transparentize($bright, 0.9)
-      outline: none
-      border: 0
-      color: $bright
-      font-size: 0.9rem
-      padding: 1rem
-      // margin: 0 10px
-      transition: all ease-in-out 300ms
-      &::placeholder
-        color: transparentize($bright, 0.6)
-      &:focus
-        box-shadow: inset 0 -2px 0 0px $bright
-
-    textarea
-      width: 100%
-      margin-bottom: .25rem
-      font-family: $mainFont
   a
-    margin-top: 0.83em
-    display: inline-block
-    padding: 10px 50px
-    text-decoration: none
     font-weight: bold
-    background-color: $main
+    text-decoration: none
+    letter-spacing: 2px
+  //   margin-top: 0.83em
+  //   display: inline-block
+  //   padding: 10px 50px
+  //   background-color: $main
+  //   color: $bright
+  //   box-shadow: 0 4px 0 0 $bright
+  //   transition: all ease-in-out 100ms
+  //   &:active
+  //     transform: translate(0, 4px)
+  //     box-shadow: 0px 0px 0px 0px $bright
+
+  a
     color: $bright
-    box-shadow: 0 4px 0 0 $bright
-    transition: all ease-in-out 100ms
-    &:active
-      transform: translate(0, 4px)
-      box-shadow: 0px 0px 0px 0px $bright
+    @include btn-draw($main, $bright, 2px, 1em)
 
 // - - - - - - FOOTER - - - - - - //
 footer
