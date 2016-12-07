@@ -335,6 +335,13 @@ main hr {
       color: #EFFFE9;
       background-color: #ec4b5f;
       transition-delay: 0.6s; }
+  #contact svg {
+    float: left;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: .6rem; }
+    #contact svg path {
+      fill: currentColor; }
 
 footer {
   margin-top: 2rem;
