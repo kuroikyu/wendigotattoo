@@ -1,13 +1,39 @@
+- var title = "Wendigo Tattoo | Make your dreams become ink"
+- var description = "Beautiful tatoos and handcrafted designs. Make your dreams become ink."
+- var author = "Kuroi Kyu"
+- var image = "http://kuroikyu.com/wendigotattoo/assets/img/landing.png"
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="theme-color" content="#011627")
-    title= "Wendigo Tattoo | Make your dreams become ink"
-    link(rel="stylesheet" type="text/css" href="assets/css/styles.css")
+    meta(name="description" content=description)
+    meta(name="author" content=author)
+    meta(name="keywords" content="Wendigo Tattoo, Wendigo, Tattoo, Ink, Portfolio, Custom")
+    title=title
+
+    // Facebook's share tags
+    //- meta(property="fb:app_id" content="")
+    meta(property="og:url" content="http://kuroikyu.com/wendigotattoo")
+    meta(property="og:title" content=title)
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=description)
+    meta(property="og:image" content=image)
+    meta(property="og:site_name" content="Wendigo Tattoo")
+
+    // Twitter share tags
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:content" content="@wendigotattoo")
+    meta(name="twitter:creator" content="@kuroikyu")
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=image)
+
+    // CSS
+    link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     link(href="https://fonts.googleapis.com/css?family=Roboto|Fredericka+the+Great|Open+Sans+Condensed:300,700|Amatic+SC" rel='stylesheet' type='text/css')
-    link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet" type="text/css" href="assets/css/styles.css")
 
   body
     .dimmer
@@ -16,8 +42,7 @@ html(lang="en")
       .wrapper
         include assets/logo.svg
         //- img(src="assets/logo.svg", alt="")
-        h1.no-margin-padding Wendigo
-          span Tattoo
+        h1.no-margin-padding Wendigo#[span Tattoo]
         h4.no-margin-padding Make your dreams become ink
         //- a(href="#") Contact
         a(href="https://www.facebook.com/WendigoTattoo/" target="_blank"): i.fa.fa-facebook-official
@@ -45,7 +70,7 @@ html(lang="en")
             .media
               img.avatar(src="assets/img/roc.jpg")
             .content
-              p Soy Roc y esto es jackass. Lo peto haciendo lo que sea y lo sabes. Aqui pondriamos una descripcion asi todo molona. Rafa huele a culo. Lorem ipsum de la muerte.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
       hr
 
@@ -63,7 +88,7 @@ html(lang="en")
             img(src="assets/img/work/flower.jpg", alt="flower")
 
 
-      //- OPINIONS test
+      //- OPINIONS
       section#opinions
         h2 Opinions
         .wrapper
@@ -78,36 +103,29 @@ html(lang="en")
           .carousel-wrap
             .media-object.carousel-unit
               .media
+                img.avatar(src="assets/img/rafa.jpg")
+              .content
+                p Estoy muy contento con mi tatuaje. Roc captó la esencia del concepto que me quería tatuar y me recomendó qué era lo que podría quedar mejor estéticamente.
+                p.muted — Rafa R.
+
+            .media-object.carousel-unit
+              .media
                 img.avatar(src="assets/img/maria.jpg")
               .content
-                p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
-                p.muted — Maria
-
-            .media-object.carousel-unit
-              .media
-                img.avatar(src="assets/img/roc.jpg")
-              .content
-                p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
-                p.muted — Maria
-
-            .media-object.carousel-unit
-              .media
-                img.avatar(src="assets/img/profile.jpg")
-              .content
-                p Ma gustao musho. Roc e mu buen xico, me trato mu bieng i lo volveria a aser. Les dejo mis dies. Un abraso.
-                p.muted — Maria
+                p ¡Tatuarme con Wendigo fue  genial! Captó la idea de lo que quería en seguida, después sólo hizo falta perfilar detalles y listo. En las sesiones, fue muy atento, cercano y profesional.
+                p.muted — Maria G.
 
       //- CONTACT
     section#contact
       .wrapper
         h2 Contact me
         a#contact-me(href="http://m.me/WendigoTattoo", target="_blank")
-          span  facebook messenger
+          span facebook messenger
             include assets/img/facebook-messenger.svg
 
 
     footer
-      p Kuroi Kyu &copy; 2016
+      p Kuroi Kyu &copy; 2016-2017
 
     script(type="application/javascript", src="assets/js/jquery-3.0.0.min.js")
     script(type="application/javascript", src="assets/js/functions.js")
