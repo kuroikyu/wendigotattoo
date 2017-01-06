@@ -1,13 +1,39 @@
+- var title = "Wendigo Tattoo | Make your dreams become ink"
+- var description = "Beautiful tatoos and handcrafted designs. Make your dreams become ink."
+- var author = "Kuroi Kyu"
+- var image = "http://kuroikyu.com/wendigotattoo/assets/img/landing.jpg"
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="theme-color" content="#011627")
-    title= "Wendigo Tattoo | Make your dreams become ink"
-    link(rel="stylesheet" type="text/css" href="assets/css/styles.css")
-    link(href="https://fonts.googleapis.com/css?family=Roboto|Fredericka+the+Great|Open+Sans+Condensed:300,700|Amatic+SC" rel='stylesheet' type='text/css')
+    meta(name="description" content=description)
+    meta(name="author" content=author)
+    meta(name="keywords" content="Wendigo Tattoo, Wendigo, Tattoo, Ink, Portfolio, Custom")
+    title=title
+
+    // Facebook's share tags
+    //- meta(property="fb:app_id" content="")
+    meta(property="og:url" content="http://kuroikyu.com/wendigotattoo")
+    meta(property="og:title" content=title)
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=description)
+    meta(property="og:image" content=image)
+    meta(property="og:site_name" content="Wendigo Tattoo")
+
+    // Twitter share tags
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:content" content="@wendigotattoo")
+    meta(name="twitter:creator" content="@kuroikyu")
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=image)
+
+    // CSS
     link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Roboto|Fredericka+the+Great|Open+Sans+Condensed:300,700|Amatic+SC" rel='stylesheet' type='text/css')
+    link(rel="stylesheet" type="text/css" href="assets/css/styles.css")
 
   body
     .dimmer
