@@ -48,3 +48,9 @@ Temporary Items
 
 # Other
 prepros.cfg
+
+# Node
+/node_modules/
+
+# Project
+src/img/original

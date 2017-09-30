@@ -1,0 +1,39 @@
+// Global Styles
+*
+  box-sizing: border-box
+
+html, body, button
+  font-family: "Cabin", sans-serif
+
+a
+  text-decoration: none
+
+li
+  list-style: none !important
+
+body
+  background-color: $background
+  @media screen and (max-width: $breakpoint-medium)
+    font-size: 14px
+
+.wrapper
+  width: 1440px
+  max-width: 83%
+  margin: 0 auto
+  @media screen and (max-width: $breakpoint-medium)
+    max-width: 90%
+
+h1, h2, h3, h4, h5, h6, p, a, span, i
+  padding: 0
+  margin: 0
+  color: $main
+  text-transform: uppercase
+  letter-spacing: .25em
+
+h1, h2, h3, h4, h5, h6
+  text-align: center
+  font-weight: bold
+
+section
+  height: 100vh
+  position: relative

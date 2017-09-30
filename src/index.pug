@@ -1,0 +1,82 @@
+- var title = "Wendigo Ink"
+- var description = ""
+- var author = "Kuroi Kyu"
+- var tags = "Wendigo Ink, Wendigo, Ink, Tattoo, Percing, Lleida, Lerida"
+- var url = "https://wendigoink.com"
+- var image = url + "/src/landing.png"
+- var twitterAt = "@wendigoink"
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="theme-color" content="#22222C")
+
+    title=title
+    meta(name="description" content=description)
+    meta(name="author" content=author)
+    meta(name="keywords" content=tags)
+
+    // Responsive meta tag
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    // icons
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", href="/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="/favicon-16x16.png", sizes="16x16")
+    link(rel="manifest", href="/manifest.json")
+    link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#E04545")
+
+    // Facebook's share tags
+    //- meta(property="fb:app_id" content="")
+    meta(property="og:url" content=url)
+    meta(property="og:title" content=title)
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=description)
+    meta(property="og:image" content=image)
+    meta(property="og:site_name" content=title)
+
+    // Twitter share tags
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:content" content=twitterAt)
+    meta(name="twitter:creator" content=twitterAt)
+    meta(name="twitter:title" content=title)
+    meta(name="twitter:description" content=description)
+    meta(name="twitter:image" content=image)
+
+    // Fonts
+    link(href="https://fonts.googleapis.com/css?family=Cabin" rel='stylesheet' type='text/css')
+
+  body
+    section.header
+      .wrapper
+        nav.bar
+          ul.languages
+            li.lang.active: a(href="#") En
+            li /
+            li.lang: a(href="#") Ca
+            li /
+            li.lang: a(href="#") Es
+
+          ul.menu
+            li
+              a(href="#") Tattoo
+            li
+              a(href="#") Piercing
+            li
+              a(href="#") T-Shirts
+            li
+              a(href="#") Art &amp; Accessories
+            li
+              a(href="#") About
+
+          a.cta(href="#") Book an appointment
+
+        img.main-logo(src="./src/img/original/main/main-logo-transparent.png", alt="Wendigo Ink")
+        img.triangle(src="./src/img/helpers/bold-triangle.png", alt="Down triangle")
+
+    section.landing
+      .wrapper
+        h1 Tattoo
+
+
